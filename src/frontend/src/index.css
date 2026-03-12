@@ -1,0 +1,137 @@
+@font-face {
+  font-family: "Fraunces";
+  src: url("/assets/fonts/Fraunces.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Figtree";
+  src: url("/assets/fonts/Figtree.woff2") format("woff2");
+  font-weight: 300 900;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* WhatsApp green brand palette - warm trustworthy light theme */
+    --background: 0.97 0.008 85;
+    --foreground: 0.18 0.02 60;
+
+    --card: 1 0 0;
+    --card-foreground: 0.18 0.02 60;
+
+    --popover: 1 0 0;
+    --popover-foreground: 0.18 0.02 60;
+
+    /* WhatsApp green as primary */
+    --primary: 0.62 0.17 145;
+    --primary-foreground: 1 0 0;
+
+    --secondary: 0.94 0.015 85;
+    --secondary-foreground: 0.25 0.03 60;
+
+    --muted: 0.93 0.012 85;
+    --muted-foreground: 0.52 0.03 60;
+
+    --accent: 0.94 0.04 145;
+    --accent-foreground: 0.28 0.12 145;
+
+    --destructive: 0.55 0.22 25;
+    --destructive-foreground: 1 0 0;
+
+    --border: 0.88 0.015 80;
+    --input: 0.88 0.015 80;
+    --ring: 0.62 0.17 145;
+
+    --radius: 0.75rem;
+
+    /* Status colors */
+    --status-pending: 0.78 0.14 75;
+    --status-paid: 0.62 0.17 145;
+    --status-cod: 0.58 0.16 240;
+    --status-delivered: 0.62 0.17 145;
+    --status-out-delivery: 0.68 0.18 55;
+
+    --chart-1: 0.62 0.17 145;
+    --chart-2: 0.68 0.18 55;
+    --chart-3: 0.78 0.14 75;
+    --chart-4: 0.58 0.16 240;
+    --chart-5: 0.55 0.22 25;
+
+    --sidebar: 0.16 0.03 145;
+    --sidebar-foreground: 0.95 0.01 145;
+    --sidebar-primary: 0.62 0.17 145;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.22 0.04 145;
+    --sidebar-accent-foreground: 0.9 0.02 145;
+    --sidebar-border: 0.25 0.04 145;
+    --sidebar-ring: 0.62 0.17 145;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+    font-size: 16px;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .status-pending {
+    background-color: oklch(0.96 0.06 75);
+    color: oklch(0.45 0.18 60);
+    border: 1px solid oklch(0.85 0.12 70);
+  }
+  .status-paid {
+    background-color: oklch(0.94 0.06 145);
+    color: oklch(0.35 0.15 145);
+    border: 1px solid oklch(0.78 0.14 145);
+  }
+  .status-cod {
+    background-color: oklch(0.93 0.05 240);
+    color: oklch(0.38 0.16 240);
+    border: 1px solid oklch(0.72 0.14 240);
+  }
+  .status-out-delivery {
+    background-color: oklch(0.96 0.07 55);
+    color: oklch(0.45 0.18 45);
+    border: 1px solid oklch(0.82 0.14 55);
+  }
+  .status-delivered {
+    background-color: oklch(0.94 0.06 145);
+    color: oklch(0.35 0.15 145);
+    border: 1px solid oklch(0.78 0.14 145);
+  }
+
+  .brand-gradient {
+    background: linear-gradient(
+      135deg,
+      oklch(0.2 0.06 145),
+      oklch(0.16 0.04 145)
+    );
+  }
+
+  .whatsapp-green {
+    color: oklch(0.62 0.17 145);
+  }
+
+  .whatsapp-bg {
+    background-color: oklch(0.62 0.17 145);
+  }
+}
